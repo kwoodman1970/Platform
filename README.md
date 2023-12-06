@@ -1,6 +1,6 @@
 # Platform (C/C++) &ndash;  Macros for Platform-Independent Code
-**Status:**  Inactive
-This project is not being actively developed at this time but has not been abandoned either.
+**Status:**  Inactive<br />
+*This project is not being actively developed at this time but has not been abandoned either.*
 
 ## About This Project
 
@@ -19,9 +19,9 @@ This project's goal was to bring order to this chaos by implementing a common se
 
 #endif
   ```
-  
+
   it would be possible to code:
-  
+
 ```c
 #if (PF_OS == PF_WIN32)
   // compile Windows-specific fragment
@@ -36,15 +36,17 @@ In the context of Best Practices, it's best to keep platform-specific code toget
 
 Use the green `<> Code` button to either clone this repository or download the zip file.
 
-To install, copy the files in the `src/headers` directory to a directory for 3<sup>rd</sup>-party standard header files.    Each compiler is different &ndash; refer to your compiler's manual for information on how to use such directories.
+To install, copy the contents of the `src/headers` directory to a directory for your compiler's 3<sup>rd</sup>-party standard header files.
 
-Do **not** place the headers in the same directory as the header files that shipped with your compiler.  Always use a separate directory (or directories) for 3<sup>rd</sup>-party header files.
+Do **not** place these files in the same directories as the files that shipped with your compiler &ndash; always use a separate directory (or directories) for 3<sup>rd</sup>-party files.
+
+Each compiler is different &ndash; refer to your compiler's manual for more information.
 
 ## How to Use
 
 *All source files are fully documented &ndash; what follows is a summary.*
 
-Generally speaking, place the following directive in your source files **after** all other `#include` directives :
+Generally speaking, in spite of Best Practices, place the following directive in your source files **after** all other `#include` directives:
 
 ```c
 #include <platform.h>
@@ -105,4 +107,4 @@ Compile and link `src/example/testplat.cpp` into a command-line executable and r
 
 ## How to Contribute
 
-If you'd like to update any of the files in this repository or contribute new ones then please create a Pull Request.
+If you'd like to update any of the files in this repository or contribute new ones then please fork this repository and create a pull request.
